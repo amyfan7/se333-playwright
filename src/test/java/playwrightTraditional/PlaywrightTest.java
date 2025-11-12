@@ -23,7 +23,7 @@ public class PlaywrightTest {
     static void setup() {
         playwright = Playwright.create();
         browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
-                .setHeadless(true));
+                .setHeadless(false));
         context = browser.newContext(new Browser.NewContextOptions()
                 .setRecordVideoDir(Paths.get("videos/"))
                 .setRecordVideoSize(1280, 720));
